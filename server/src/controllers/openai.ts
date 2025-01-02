@@ -1,9 +1,8 @@
 import { type RequestHandler } from 'express';
 import { OpenAI } from 'openai';
-import dotenv from 'dotenv'
-dotenv.config()
+import { OPENAI_API_KEY } from '../constants';
 
-const openai = new OpenAI({apiKey: process.env.OPENAI_API_KEY});
+const openai = new OpenAI({apiKey: OPENAI_API_KEY});
 
 const generateMessage: RequestHandler = async (req, res, next) => {
   try {

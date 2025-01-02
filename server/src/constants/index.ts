@@ -11,4 +11,6 @@ const MONGO_OPTIONS = {}
 
 const JWT_SECRET = process.env.JWT_SECRET || 'unsafe_secret'
 
-export { ORIGIN, PORT, MONGO_URI, MONGO_OPTIONS, JWT_SECRET }
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY
+
+export { ORIGIN, PORT, MONGO_URI, MONGO_OPTIONS, JWT_SECRET, OPENAI_API_KEY }
